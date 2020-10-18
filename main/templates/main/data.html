@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Вот, собственно, и файлы:</h1>
+    {% if fusion %}
+            {% for el, ex in fusion %}
+                <div class="alert alert-warning mt-4">
+                    <h3>Название: {{ el.titleFile }}</h3>
+                    <h4>Расширение: {{ ex }}</h4>
+                    <h4>Время: {{ el.timeFile }}</h4>
+                </div>
+            {% endfor %}
+    {% else %}
+        <p>В директории пустота</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+    <h1 style="margin-left: 50px; margin-top: 10px; ">
+        Главная
+    </h1>
+    <p class="lead" style="margin-left: 50%; margin-top: 100px; ">
+        <a href="{% url 'data' %}" class="btn btn-lg btn-secondary">Файлы</a>
+    </p>
+{% endblock %}

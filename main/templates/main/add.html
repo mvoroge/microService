@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Добавление файла
+{% endblock %}
+
+{% block content %}
+    <h1>Добавление файла в директорию</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}<br>
+        {{ form.titleFile }}<br>
+        {{ form.samFile }}
+        <button style="margin-top: 15px" type="submit" class="=btn btn-success">Сохранить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
